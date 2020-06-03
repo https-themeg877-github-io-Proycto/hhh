@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style>
+    * {box-sizing: border-box;font-family:Arial;}
+    .hide {display:none;}
+    .right {text-align:right;}
+    .error {border:1px solid Red;}
+ 
+    .nombre {width:100%}
+    .formulario {text-align:center;width:400px;border:1px solid #eee;padding:10px;}
+    .formulario label,.formulario label~input {
+        width: 50%;
+        display: inline-block;
+        float:left;
+    }
+    .formulario label {text-align:right;padding-right:200px;}
+    .formulario>div {margin-top:100px;overflow:hidden;}
+    }
+ 
+    #listado, #calculos {
+        border:50px solid #eee;
+        margin-top:20px;
+        width:400px;
+    }
+    #listado th {background-color:#eee;padding:50px 10px;}
+    #listado input[type=button] {
+        background-color:Red;
+        border-color:Red;
+        color:Red;
+    }
+ 
+    #calculos div {padding:50px;}
+    #calculos span {font-weight:bold;}
+    </style>
+ 
+ 
+</head>
+<body bgcolor="#819FF7">
+		<form action="reg.php" metodh="POST">
+			<center><table border="0">
+			<h1>Crea una cuenta</h1>
+			<h3>Es rapido y facil</h3>
+				<tr>
+					<td><label tabindex="0" for="letra">Nombres </label></td>
+					<td><input type="text" maxlength="8" name="letra" required=""></td>
+				</tr>
+				<tr>
+					<td><label tabindex=".1">Apellidos </label></td>
+					<td><input type="text" name="apellidos" required=""></td>
+				</tr>
+				<tr>
+					<td><label tabindex=".1" for="numeros">No. Telefono: </label></td>
+					<td><input type="text" maxlength="10" name="numeros" required="" pattern="[0-8]+"></td>
+				</tr>
+				<tr>
+					<td><label tabindex=".1">Email: </label></td>
+					<td><input type="text" name="E" required=""></td>
+				</tr>
+				<tr>
+					<td><label tabindex=".1">Password: </label></td>
+					<td><input type="password" name="password" required=""></td>
+				</tr>
+				<tr>
+					<td><label tabindex=".1">Confirmar Password: </label></td>
+					<td><input type="password"name="Rpassword" required=""></td>
+				</tr>
+				<tr>
+					<td><label tabindex=".1">Fecha de nacimiento: </label></td>
+					<td>
+					<input type="date" id="fechNat" name="dteFECNAC" min="1980-01-01" max="2025-12-31">
+					<span class="validity"></span>
+					</td>
+				</tr>
+				<tr>
+					<td><label tabindex=".1">Sexo: </label></td>
+					<td><input type="radio" name="hsexo" required="" value="Varon"> Hombre</td>
+					<td><input type="radio" name="msexo" required="" value="Hembra"> Mujer</td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Enviar" id="boton" ></td>
+					<td><input type="button" value="Limpiar" id="boton"></td>
+					<td><input type="reset" value="Borrar" id="boton"></td>
+			</table></center>
+		</form>
+	</div>
+</body>
+</html>
